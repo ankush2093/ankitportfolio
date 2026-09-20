@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Kumar | Social Media Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Ankit Kumar - Social Media Executive, Content Creator, and Digital Marketing Professional.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <style>
+        /* ================================
+   POSTER SECTION
+================================ */
+
+        .poster-images-section {
+            background: #080808;
+            padding-top: 90px !important;
+            padding-bottom: 100px !important;
+            color: #fff;
+        }
+
+        /* Section Heading */
+
+        .poster-section-heading {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .poster-eyebrow {
+            display: inline-block;
+            color: #00ff73;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .poster-section-heading h2 {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 38px;
+            font-weight: 500;
+            color: #f5f5f5;
+        }
+
+        .poster-section-heading h2 span {
+            color: #00e86b;
+        }
+
+        .poster-section-heading p {
+            margin: 15px auto 0;
+            max-width: 600px;
+            color: #858585;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+
+        /* ================================
+   POSTER CARD
+================================ */
+
+        .poster-card {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+
+            background: #111;
+            border: 1px solid #1b1b1b;
+            border-radius: 8px;
+
+            transition:
+                transform 0.4s ease,
+                border-color 0.4s ease,
+                box-shadow 0.4s ease;
+
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .poster-card img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease,
+                filter 0.6s ease;
+        }
+
+
+        /* Green dark overlay */
+
+        .poster-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(to top,
+                    rgba(0, 0, 0, 0.85) 0%,
+                    rgba(0, 0, 0, 0.15) 45%,
+                    rgba(0, 0, 0, 0) 70%);
+
+            opacity: 0;
+
+            transition: opacity 0.4s ease;
+        }
+
+
+        /* Hover */
+
+        .poster-card:hover {
+            border-color: rgba(0, 255, 115, 0.45);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.5),
+                0 0 25px rgba(0, 255, 115, 0.08);
+        }
+
+        .poster-card:hover img {
+            transform: scale(1.05);
+            filter: brightness(0.7);
+        }
+
+        .poster-card:hover::after {
+            opacity: 1;
+        }
+
+
+        /* ================================
+   OVERLAY CONTENT
+================================ */
+
+        .poster-overlay {
+            position: absolute;
+
+            left: 22px;
+            right: 22px;
+            bottom: 20px;
+
+            z-index: 2;
+
+            opacity: 0;
+            transform: translateY(15px);
+
+            transition:
+                opacity 0.4s ease,
+                transform 0.4s ease;
+        }
+
+        .poster-card:hover .poster-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .poster-overlay span {
+            display: inline-block;
+
+            margin-bottom: 6px;
+
+            color: #00f878;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .poster-overlay h3 {
+            margin: 0;
+
+            color: #fff;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+
+        /* ================================
+   RESPONSIVE
+================================ */
+
+        @media (max-width: 991px) {
+
+            .poster-images-section {
+                padding-top: 70px !important;
+                padding-bottom: 70px !important;
+            }
+
+            .poster-section-heading h2 {
+                font-size: 32px;
+            }
+
+            .poster-card {
+                height: 450px;
+            }
+        }
+
+
+        @media (max-width: 575px) {
+
+            .poster-images-section {
+                padding-top: 55px !important;
+                padding-bottom: 60px !important;
+            }
+
+            .poster-section-heading {
+                padding: 0 15px;
+            }
+
+            .poster-section-heading h2 {
+                font-size: 28px;
+            }
+
+            .poster-section-heading p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AK<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+            
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="py-5 poster-images-section">
+        <div class="container">
+
+            <!-- Section Heading -->
+            <div class="section-header fade-up visible">
+                <p class="section-subtitle">MY CREATIVE WORK</p>
+                <h2 class="section-title">Selected <span class="highlight">Posters</span></h2>
+            </div>
+
+            <!-- Posters Grid -->
+            <div class="row g-4 poster-grid">
+
+                <!-- Poster 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-1.jpeg" alt="Creative Poster 1" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>01</span>
+                            <h3>Creative Campaign</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-2.jpeg" alt="Creative Poster 2" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>02</span>
+                            <h3>Social Media Design</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-3.jpeg" alt="Creative Poster 3" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>03</span>
+                            <h3>Digital Content</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-4.jpeg" alt="Creative Poster 4" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>04</span>
+                            <h3>Promotional Creative</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-5.jpeg" alt="Creative Poster 5" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>05</span>
+                            <h3>Festival Campaign</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-6.jpeg" alt="Creative Poster 6" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>06</span>
+                            <h3>Awareness Campaign</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Poster 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="poster-card">
+                        <img src="images/poster-7.jpeg" alt="Creative Poster 7" loading="lazy">
+
+                        <div class="poster-overlay">
+                            <span>07</span>
+                            <h3>Creative Content</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <h3>ANKIT KUMAR</h3>
+                <p>Social Media Executive | Content Creator | Digital Marketing</p>
+            </div>
+            <div class="footer-right">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Ankit Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
